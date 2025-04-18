@@ -5,6 +5,7 @@ import Start from '../screens/start'
 import Login from '../screens/login'
 import Home from '../screens/home'
 
+
 export default function Routes() {
 
     const Stack = createNativeStackNavigator()
@@ -13,7 +14,7 @@ export default function Routes() {
     return (
         <NavigationContainer>
 
-            <Stack.Navigator initialRouteName='Start'>
+            <Stack.Navigator initialRouteName='Home'>
 
                 <Stack.Screen name='Start' component={ Start } options={{headerShown:false}}/>
                 <Stack.Screen name='Login' component={ Login } options={{headerShown:false}}/>

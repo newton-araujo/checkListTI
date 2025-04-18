@@ -5,6 +5,7 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 import styles from './style';
 import Main from '../main';
 import DataCenter from '../datacenter';
+import RoomSwitch from '../roomSwitch';
 
 
 
@@ -12,7 +13,7 @@ export default function Home({ route }) {
 
   {/*const { userLogged } = route.params;*/}
 
-  const [activeTab, setActiveTab] = useState("main")
+  const [activeTab, setActiveTab] = useState("room")
   const renderTab = () => {
 
     switch (activeTab) {
@@ -20,6 +21,8 @@ export default function Home({ route }) {
             return <Main user={'Newton'}/>
         case "dc":
             return <DataCenter />
+        case "room":
+            return <RoomSwitch />
         default:
             break;
     }
@@ -43,7 +46,7 @@ export default function Home({ route }) {
                 <Icon name='home' size={30} color={"#323139"}/>
             </TouchableOpacity>
 
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => setActiveTab("room")} >
                 <Icon name='server' size={30} color={"#323139"}/>
             </TouchableOpacity>
 

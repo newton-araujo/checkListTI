@@ -106,7 +106,37 @@ const styles = StyleSheet.create({
     alignItems:"center",
     paddingTop:10,
     paddingBottom:10,
+  },
+
+  //BtnQrCode
+  btns:{
+    flexDirection:"row",
+    justifyContent:"center",
+    alignItems:"center",
+    height:100
+  },
+
+  btnQrCode:{
+    padding:15,
+    backgroundColor:"#04ff",
+    borderRadius:10,
+    flexDirection:"row",
+    justifyContent:"center",
+    alignItems:"center",
+    gap:10
+  },
+
+  contentBtn:{
+    color:"#fff",
+    fontWeight:"bold",
+    fontSize:17
+  },
+
+  cotentCam:{
+    height:80
   }
+
+
 })
 
 export default styles
